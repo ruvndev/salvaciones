@@ -1,0 +1,232 @@
+
+RESUMEN PC2 - ESPECIFICACIÓN Y ANÁLISIS DE REQUERIMIENTOS (UPC)
+
+1. ESTRUCTURA DEL EXAMEN
+A) 2 Epics
+B) 4 User Stories funcionales (2 por cada Epic)
+C) 2 User Stories no funcionales
+D) Seleccionar 2 User Stories y asignar Story Points
+E) Crear Acceptance Criteria para esas 2 User Stories
+
+--------------------------------------------------
+2. EPICS
+Una Epic es una funcionalidad grande que no puede completarse en un Sprint.
+
+Formato:
+Como [rol]
+Quiero [objetivo]
+Para [beneficio]
+
+Ejemplo:
+Como cliente, quiero recibir recomendaciones personalizadas de seguros para encontrar la póliza más adecuada.
+
+--------------------------------------------------
+3. USER STORIES FUNCIONALES
+
+Formato:
+Como [rol]
+Quiero [acción]
+Para [beneficio]
+
+Ejemplo:
+Como cliente
+Quiero visualizar recomendaciones de pólizas
+Para elegir la mejor opción para mí.
+
+Regla:
+Las User Stories deben derivarse directamente de la Epic.
+
+INVEST:
+- Independent
+- Negotiable
+- Valuable
+- Estimable
+- Small
+- Testable
+
+--------------------------------------------------
+4. USER STORIES NO FUNCIONALES
+
+Describen calidad del sistema, no funcionalidades.
+
+Preguntas guía:
+- ¿Qué tan rápido? (Rendimiento)
+- ¿Qué tan seguro? (Seguridad)
+- ¿Qué tan disponible? (Disponibilidad)
+- ¿Qué tan usable? (Usabilidad)
+
+Ejemplo:
+Como cliente
+Quiero recibir recomendaciones en menos de 5 segundos
+Para obtener una experiencia rápida.
+
+--------------------------------------------------
+5. STORY POINTS
+
+No miden tiempo.
+Miden:
+- Complejidad
+- Riesgo
+- Repetición
+
+Escala recomendada:
+1 = Muy pequeña
+2 = Pequeña
+3 = Normal
+5 = Moderada
+8 = Compleja
+
+Factores de riesgo:
+- Requisitos poco claros
+- Dependencia de terceros
+- Incertidumbre futura
+
+REPETICIÓN
+
+Alta:
+- CRUD
+- Login
+- Formularios
+- Listados
+
+Media:
+- Reportes
+- Alertas
+- Recomendaciones
+
+Baja:
+- IA
+- Machine Learning
+- Predicciones
+- Detección de fraude
+
+Justificación ejemplo:
+
+5 SP:
+Complejidad media
+Riesgo medio
+Repetición media-alta
+
+8 SP:
+Complejidad alta
+Riesgo alto
+Repetición baja
+
+--------------------------------------------------
+6. PLANNING POKER
+
+1. Se explica la historia.
+2. Todos hacen preguntas.
+3. Cada miembro elige una carta.
+4. Revelan simultáneamente.
+5. Se discuten diferencias.
+6. Se repite hasta lograr consenso.
+
+--------------------------------------------------
+7. ACCEPTANCE CRITERIA
+
+Sirven para definir cuándo una historia está terminada.
+
+Formato obligatorio:
+
+Given (Dado)
+When (Cuando)
+Then (Entonces)
+
+--------------------------------------------------
+8. ESCENARIOS RECOMENDADOS
+
+Para cada User Story:
+
+A) Happy Path
+Funcionamiento normal.
+
+B) Alternate
+Variación válida del flujo.
+
+C) Exception
+Error o situación excepcional.
+
+Plantilla:
+
+Scenario: Happy Path
+
+Given ...
+When ...
+Then ...
+
+Scenario: Alternate
+
+Given ...
+When ...
+Then ...
+
+Scenario: Exception
+
+Given ...
+When ...
+Then ...
+
+--------------------------------------------------
+9. LO MÁS IMPORTANTE PARA MEMORIZAR
+
+- Epic = funcionalidad grande.
+- User Story = funcionalidad específica.
+- Formato: Como / Quiero / Para.
+- 2 Epics.
+- 4 User Stories funcionales.
+- 2 User Stories no funcionales.
+- Story Points = Complejidad + Riesgo + Repetición.
+- Fibonacci: 1, 2, 3, 5, 8.
+- Acceptance Criteria = Given / When / Then.
+- Crear escenarios Happy Path, Alternate y Exception.
+
+
+--------------------------------------------------
+LEYENDA RÁPIDA (TRADUCCIÓN)
+
+Given = Dado que...
+Describe la situación inicial o el contexto.
+
+When = Cuando...
+Describe la acción realizada por el usuario o sistema.
+
+Then = Entonces...
+Describe el resultado esperado.
+
+Happy Path = Camino feliz
+El flujo normal donde todo sale bien.
+
+Alternate = Flujo alternativo
+Una variación válida del proceso.
+
+Exception = Excepción
+Un error o situación inesperada.
+
+Feature = Característica o funcionalidad.
+
+Sprint = Iteración de trabajo de Scrum.
+
+Velocity = Cantidad de Story Points que el equipo suele completar por Sprint.
+
+Story Point (SP) = Medida relativa de esfuerzo.
+No mide tiempo, mide complejidad, riesgo y repetición.
+
+Core Business = Actividad principal del negocio.
+
+Epic = Funcionalidad grande que luego se divide en varias User Stories.
+
+User Story = Funcionalidad específica que aporta valor al usuario.
+
+Acceptance Criteria = Criterios de aceptación.
+Definen cuándo una User Story está completa.
+
+Planning Poker = Técnica de consenso para estimar Story Points.
+
+INVEST:
+I = Independent (Independiente)
+N = Negotiable (Negociable)
+V = Valuable (Valiosa)
+E = Estimable (Estimable)
+S = Small (Pequeña)
+T = Testable (Probable / Verificable mediante pruebas)

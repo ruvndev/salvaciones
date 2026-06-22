@@ -1,0 +1,252 @@
+
+SOLUCIÓN MODELO PC2 - SMARTSEGURO360 (VERSIÓN ENTENDIBLE)
+
+==================================================
+A) DOS ÉPICAS BASADAS EN EL CORE BUSINESS
+==================================================
+
+¿QUÉ ES UNA ÉPICA?
+Una Epic es una funcionalidad grande que no puede desarrollarse en un solo Sprint.
+Posteriormente se divide en varias User Stories.
+
+Formato:
+Como [persona]
+Quiero [objetivo]
+Para [beneficio]
+
+EPIC 1: MOTOR DE RECOMENDACIONES INTELIGENTES
+
+Como cliente de SmartSeguro360,
+Quiero recibir recomendaciones personalizadas de seguros basadas en inteligencia artificial
+Para encontrar productos que se adapten mejor a mi perfil y necesidades.
+
+EPIC 2: SISTEMA DE DETECCIÓN DE FRAUDES CON IA
+
+Como aseguradora,
+Quiero detectar automáticamente solicitudes o reclamaciones sospechosas mediante inteligencia artificial
+Para reducir riesgos y prevenir fraudes.
+
+==================================================
+B) USER STORIES FUNCIONALES
+==================================================
+
+¿QUÉ ES UNA USER STORY FUNCIONAL?
+
+Describe una funcionalidad específica que el sistema debe realizar.
+Las User Stories nacen a partir de una Epic.
+
+Formato:
+Como [persona]
+Quiero [acción]
+Para [beneficio]
+
+--------------------
+EPIC 1
+--------------------
+
+USF-01
+
+Como cliente
+Quiero recibir recomendaciones de pólizas personalizadas según mi perfil
+Para encontrar rápidamente el seguro más adecuado para mis necesidades.
+
+USF-02
+
+Como cliente
+Quiero visualizar una explicación de por qué se me recomienda una póliza
+Para comprender mejor la sugerencia realizada por el sistema.
+
+--------------------
+EPIC 2
+--------------------
+
+USF-03
+
+Como analista de riesgos
+Quiero que el sistema identifique automáticamente reclamaciones sospechosas
+Para reducir el tiempo de revisión manual.
+
+USF-04
+
+Como analista de riesgos
+Quiero visualizar una puntuación de riesgo para cada reclamación
+Para priorizar las investigaciones más críticas.
+
+Recordatorio INVEST:
+
+I = Independent (Independiente)
+N = Negotiable (Negociable)
+V = Valuable (Valiosa)
+E = Estimable (Estimable)
+S = Small (Pequeña)
+T = Testable (Verificable)
+
+==================================================
+C) USER STORIES NO FUNCIONALES
+==================================================
+
+¿QUÉ SON?
+
+Describen la calidad del sistema, no una funcionalidad.
+
+Preguntas guía:
+- ¿Qué tan rápido?
+- ¿Qué tan seguro?
+- ¿Qué tan disponible?
+- ¿Qué tan usable?
+
+USNF-01 (Rendimiento)
+
+Como cliente
+Quiero recibir recomendaciones personalizadas en menos de 5 segundos
+Para obtener una experiencia rápida y eficiente.
+
+USNF-02 (Seguridad)
+
+Como analista de riesgos
+Quiero que la información utilizada para detectar fraudes esté protegida mediante cifrado
+Para garantizar la confidencialidad de los datos de los clientes.
+
+==================================================
+D) STORY POINTS
+==================================================
+
+¿QUÉ SON?
+
+Los Story Points son una medida relativa de esfuerzo.
+
+NO miden tiempo.
+
+Miden:
+- Complejidad
+- Riesgo
+- Repetición
+
+Escala usada:
+
+1 = Muy pequeña
+2 = Pequeña
+3 = Normal
+5 = Moderada
+8 = Compleja
+
+--------------------
+HISTORIA 1
+--------------------
+
+USF-01
+
+Story Points: 5 SP
+
+Justificación:
+
+Complejidad:
+Moderada porque requiere integrar datos del perfil del cliente con el catálogo de pólizas.
+
+Riesgo:
+Medio-bajo porque utiliza información estructurada.
+
+Repetición:
+Alta porque utiliza patrones comunes de segmentación y consulta de datos.
+
+--------------------
+HISTORIA 2
+--------------------
+
+USF-03
+
+Story Points: 8 SP
+
+Justificación:
+
+Complejidad:
+Alta porque analiza múltiples variables para identificar reclamaciones sospechosas.
+
+Riesgo:
+Alto debido a la incertidumbre de los criterios de fraude.
+
+Repetición:
+Baja porque requiere lógica especializada y poco común.
+
+==================================================
+E) CRITERIOS DE ACEPTACIÓN
+==================================================
+
+¿QUÉ SON?
+
+Condiciones que deben cumplirse para considerar terminada una User Story.
+
+Formato Gherkin:
+
+Given = Dado que...
+When = Cuando...
+Then = Entonces...
+
+Tipos de escenarios:
+
+Happy Path = Flujo normal
+Alternate = Flujo alternativo
+Exception = Error o excepción
+
+--------------------------------------------------
+FEATURE: RECOMENDACIONES DE PÓLIZAS
+--------------------------------------------------
+
+Scenario: Happy Path
+
+Given que el cliente tiene información completa en su perfil
+When solicita recomendaciones de pólizas
+Then el sistema muestra al menos tres pólizas adecuadas a su perfil
+
+Scenario: Alternate
+
+Given que el sistema ha generado recomendaciones
+When el cliente selecciona una póliza
+Then el sistema muestra información detallada de cobertura y costos
+
+Scenario: Exception
+
+Given que el perfil del cliente no tiene información suficiente
+When solicita recomendaciones
+Then el sistema solicita datos adicionales
+
+--------------------------------------------------
+FEATURE: DETECCIÓN DE FRAUDES
+--------------------------------------------------
+
+Scenario: Happy Path
+
+Given que una reclamación ha sido registrada
+When el sistema analiza la información
+Then el sistema asigna automáticamente un nivel de riesgo
+
+Scenario: Alternate
+
+Given que el análisis supera el umbral de riesgo
+When finaliza la evaluación
+Then el sistema marca la reclamación como sospechosa
+
+Scenario: Exception
+
+Given que la reclamación tiene datos incompletos
+When el sistema intenta evaluarla
+Then el sistema informa que no puede determinar el riesgo
+
+==================================================
+RESUMEN ULTRA RÁPIDO PARA EL EXAMEN
+==================================================
+
+1. Crear 2 Epics.
+2. Crear 2 User Stories funcionales por Epic.
+3. Crear 2 User Stories no funcionales.
+4. Elegir 2 User Stories.
+5. Asignar Story Points justificando:
+   - Complejidad
+   - Riesgo
+   - Repetición
+6. Crear criterios de aceptación.
+7. Hacer 3 escenarios:
+   - Happy Path
+   - Alternate
+   - Exception
+8. Usar Given / When / Then.
