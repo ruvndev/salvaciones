@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>UPC Helper</title>
+<style>
+body{
+    font-family: Arial;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+textarea{
+    width:100%;
+    height:250px;
+}
+pre{
+    white-space:pre-wrap;
+    border:1px solid #ccc;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+
+<h2>UPC Helper</h2>
+
+<textarea id="caso"></textarea>
+
+<br><br>
+
+<button onclick="resolver()">
+Resolver
+</button>
+
+<hr>
+
+<pre id="resultado"></pre>
+
+<script>
+
+async function resolver(){
+
+    const caso =
+        document.getElementById("caso").value;
+
+    document.getElementById("resultado")
+        .textContent = "Pensando...";
+
+    const r = await fetch("/api/solve",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            caso
+        })
+    });
+
+    const data = await r.json();
+
+    document.getElementById("resultado")
+        .textContent = data.answer;
+}
+
+</script>
+
+</body>
+</html>
